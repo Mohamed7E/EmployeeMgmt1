@@ -62,6 +62,7 @@ namespace EmployeeMgmt1
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.DeleteBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -238,7 +239,7 @@ namespace EmployeeMgmt1
             this.EmployeeList.RowHeadersVisible = false;
             this.EmployeeList.RowHeadersWidth = 51;
             this.EmployeeList.RowTemplate.Height = 29;
-            this.EmployeeList.Size = new System.Drawing.Size(1118, 601);
+            this.EmployeeList.Size = new System.Drawing.Size(1118, 538);
             this.EmployeeList.TabIndex = 22;
             this.EmployeeList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.EmployeeList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -311,6 +312,7 @@ namespace EmployeeMgmt1
             this.UpDateBtn.TabIndex = 26;
             this.UpDateBtn.Text = "UpDate";
             this.UpDateBtn.UseVisualStyleBackColor = false;
+            this.UpDateBtn.Click += new System.EventHandler(this.UpDateBtn_Click);
             // 
             // AddBtn
             // 
@@ -410,11 +412,26 @@ namespace EmployeeMgmt1
             this.pictureBox2.TabIndex = 56;
             this.pictureBox2.TabStop = false;
             // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.BackColor = System.Drawing.Color.Tomato;
+            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DeleteBtn.ForeColor = System.Drawing.Color.Thistle;
+            this.DeleteBtn.Location = new System.Drawing.Point(758, 794);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(132, 48);
+            this.DeleteBtn.TabIndex = 64;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1505, 885);
+            this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label9);
@@ -490,5 +507,6 @@ namespace EmployeeMgmt1
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button DeleteBtn;
     }
 }

@@ -97,7 +97,7 @@ namespace EmployeeMgmt1
         {
             try
             {
-                if (DepNameTb.Text == "")
+                if (Key==0)
                 {
                     MessageBox.Show("Missing Data!!!");
                 }
