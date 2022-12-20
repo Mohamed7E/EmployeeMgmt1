@@ -21,9 +21,16 @@ namespace EmployeeMgmt1
         }
         private void ShowEmp()
         {
-            string Query = "Select * form EmployeeTb";
-            EmployeeList.DataSource = con.GetData(Query);
-        }
+            try
+            { 
+                string Query = "Select * form EmployeeTbl";
+                EmployeeList.DataSource = con.GetData(Query);
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+          }
         private void GetDepartment()
         {
             string Query = "select * from DepartmentTb";
