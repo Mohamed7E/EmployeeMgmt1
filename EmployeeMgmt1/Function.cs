@@ -24,12 +24,20 @@ namespace EmployeeMgmt1
 
         public DataTable GetData(String Query)
         {
-            
+
+            try
+            {
                 dt = new DataTable();
                 sda = new SqlDataAdapter(Query, Con);
                 sda.Fill(dt);
                 return dt;
-            
+            }
+            catch (Exception Ex)
+            {
+                Console.WriteLine(Ex.Message);
+                return dt;
+            }
+
 
 
         }
