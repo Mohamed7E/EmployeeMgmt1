@@ -24,10 +24,7 @@ namespace EmployeeMgmt1
 
         private void LOGNBtn_Click(object sender, EventArgs e)
         {
-            if (nn == "" || kk == "")
-            {
-
-            }
+            
         }
     }
 }
