@@ -17,5 +17,17 @@ namespace EmployeeMgmt1
             InitializeComponent();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LOGNBtn_Click(object sender, EventArgs e)
+        {
+            if (nn == "" || kk == "")
+            {
+
+            }
+        }
     }
 }
