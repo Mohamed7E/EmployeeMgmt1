@@ -40,7 +40,7 @@ namespace EmployeeMgmt1
                     con.SetData(Query);
                     ListerDepartments();
                     DepNameTb.Text = "";
-                    MessageBox.Show("Patient Added");
+                    MessageBox.Show("Department Added");
                 }
 
             }
@@ -50,10 +50,75 @@ namespace EmployeeMgmt1
                 MessageBox.Show(Ex.Message);
             }
         }
-
+        int Key = 0;
         private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DepNameTb.Text = DepList.SelectedRows[0].Cells[1].Value.ToString();
+            
+            if (DepNameTb.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(DepList.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
 
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+
+                    string Query = "Update DepartmentTb  set DepName='{0}' where DepId={1}";
+                    Query = string.Format(Query, Dep,Key);
+                    con.SetData(Query);
+                    ListerDepartments();
+                    DepNameTb.Text = "";
+                    MessageBox.Show("Department Update");
+                }
+
+            }
+
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void DeletBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+
+                    string Query = "Delete from DepartmentTb  where DepId={0}";
+                    Query = string.Format(Query, Key);
+                    con.SetData(Query);
+                    ListerDepartments();
+                    DepNameTb.Text = "";
+                    MessageBox.Show("Department Deleteee");
+                }
+
+            }
+
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
     }
 }
