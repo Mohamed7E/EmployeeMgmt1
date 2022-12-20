@@ -38,7 +38,7 @@ namespace EmployeeMgmt1
             this.Password = new System.Windows.Forms.TextBox();
             this.kk = new System.Windows.Forms.Label();
             this.LOGNBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RegsterLbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -125,16 +125,17 @@ namespace EmployeeMgmt1
             this.LOGNBtn.UseVisualStyleBackColor = false;
             this.LOGNBtn.Click += new System.EventHandler(this.LOGNBtn_Click);
             // 
-            // label1
+            // RegsterLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(699, 681);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 36);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Regster";
+            this.RegsterLbl.AutoSize = true;
+            this.RegsterLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RegsterLbl.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.RegsterLbl.Location = new System.Drawing.Point(699, 681);
+            this.RegsterLbl.Name = "RegsterLbl";
+            this.RegsterLbl.Size = new System.Drawing.Size(126, 36);
+            this.RegsterLbl.TabIndex = 8;
+            this.RegsterLbl.Text = "Regster";
+            this.RegsterLbl.Click += new System.EventHandler(this.RegsterLbl_Click);
             // 
             // pictureBox2
             // 
@@ -152,7 +153,7 @@ namespace EmployeeMgmt1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 745);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RegsterLbl);
             this.Controls.Add(this.LOGNBtn);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.kk);
@@ -182,7 +183,7 @@ namespace EmployeeMgmt1
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Label kk;
         private System.Windows.Forms.Button LOGNBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label RegsterLbl;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -24,7 +24,30 @@ namespace EmployeeMgmt1
 
         private void LOGNBtn_Click(object sender, EventArgs e)
         {
-            
+            if(UserName.Text == ""|| Password.Text == "")
+            {
+                MessageBox.Show("Mising Data!!!!!!");
+
+            }
+            else if (UserName.Text == "Mohamed" && Password.Text == "Ebrahim")
+            {
+                Employees obj = new Employees();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong UserName Or Password");
+                UserName.Text = "";
+                Password.Text = "";
+
+            }
+        }
+
+        private void RegsterLbl_Click(object sender, EventArgs e)
+        {
+            UserName.Text = "";
+            Password.Text = "";
         }
     }
 }

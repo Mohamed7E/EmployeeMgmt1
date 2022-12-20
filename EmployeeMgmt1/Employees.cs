@@ -170,5 +170,33 @@ namespace EmployeeMgmt1
                 MessageBox.Show(Ex.Message);
             }
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Form1 obj = new Form1();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Employees obj = new Employees();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Department obj = new Department();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Salaries obj = new Salaries();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

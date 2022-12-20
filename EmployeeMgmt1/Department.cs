@@ -134,5 +134,19 @@ namespace EmployeeMgmt1
             obj.Show();
             this.Hide();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Form1 obj = new Form1();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Department obj = new Department();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
