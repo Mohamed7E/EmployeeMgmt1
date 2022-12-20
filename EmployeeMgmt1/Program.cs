@@ -17,7 +17,7 @@ namespace EmployeeMgmt1
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Employees());
+            Application.Run(new Salaries());
         }
     }
 }
