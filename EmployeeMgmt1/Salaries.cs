@@ -39,6 +39,19 @@ namespace EmployeeMgmt1
             EmpCb.ValueMember = con.GetData(Query).Columns["EmpId"].ToString();
             EmpCb.DataSource = con.GetData(Query);
         }
+        int DSal = 0;
+        string period = "";
+        private void GetSalary()
+        {
+            string Query = "select EmpSal from EmployeeTbl Where EmpId ={0}";
+            Query = string.Format(Query, EmpCb.SelectedValue.ToString());
+           
+            foreach(DataRow dr in con.GetData(Query).Rows)
+            {
+                DSal = Convert.ToInt32(dr["EmpName"].ToString());
+            }
+            //MessageBox.Show("" + DSal);
+        }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -47,6 +60,26 @@ namespace EmployeeMgmt1
         private void Salaries_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void EmpCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetSalary();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                period = periodTb.Value.Date.Month.ToString() + "-" + periodTb.Value.Date.Year.ToString();
+                int Amount = DSal * Convert.ToInt32(DaysTb.Text);
+            }
+            catch (Exception Ex)
+            {
+
+                MessageBox.Show(Ex.Message); 
+            }
+           
         }
     }
 }

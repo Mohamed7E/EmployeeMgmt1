@@ -127,5 +127,12 @@ namespace EmployeeMgmt1
             obj.Show();
             this.Hide();
         }
+
+        private void SalaryLbl_Click(object sender, EventArgs e)
+        {
+            Salaries obj = new Salaries();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
